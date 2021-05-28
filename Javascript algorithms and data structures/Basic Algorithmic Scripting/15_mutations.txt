@@ -1,0 +1,25 @@
+function mutation(arr) {
+  let letters1=splitNoRepeat(arr[0]);
+  let letters2=splitNoRepeat(arr[1]);
+
+  for(let i=0;i<letters2.length;i++){
+    if(!letters1.includes(letters2[i])){
+      return false
+    }
+  }
+  return true;
+}
+
+function splitNoRepeat(str){
+  let arr=str.split("");
+  let letters=[];
+  for(let e of arr){
+    let letter=e.toLowerCase();
+    if(!letters.includes(letter)){
+      letters.push(letter)
+    }
+  }
+  letters.sort();
+  return letters;
+}
+mutation(["hello", "hey"]);

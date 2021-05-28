@@ -1,0 +1,9 @@
+function findElement(arr, func) {
+ for(e of arr){
+   if(func(e)){
+     return e;
+   }
+ }
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);

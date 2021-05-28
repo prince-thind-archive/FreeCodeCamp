@@ -1,0 +1,14 @@
+function sumFibs(num) {
+  let num1 = 0;
+  let sum = 1;
+  let res = 0;
+  while (sum <= num) {
+    if (sum % 2 !== 0) {
+      res += sum;
+    }
+    sum += num1;
+    num1 = sum - num1;
+  }
+
+  return res;
+}

@@ -1,0 +1,17 @@
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  for(let element of arr1){
+    if(!arr2.some(e=>element==e)){
+      newArr.push(element)
+    }
+  }
+
+   for(let element of arr2){
+    if(!arr1.some(e=>element==e)){
+      newArr.push(element)
+    }
+  }
+  return newArr;
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);

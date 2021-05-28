@@ -1,0 +1,33 @@
+function convertHTML(str) {
+  let letters=str.split("");
+  for(let letter of letters){
+    let replace=findHTML(letter);
+    if(replace){
+      letters[letters.indexOf(letter)]=replace;
+    }
+  }
+  return letters.join("");
+}
+function findHTML(letter){
+  switch(letter){
+    case '&':
+    return "&amp;";
+    break;
+    case '<':
+    return "&lt;";
+    break;
+    case '>':
+    return "&gt;";
+    break;
+    case '"':
+    return "&quot;";
+    break;
+    case "'":
+    return "&apos;";
+    break;
+    default:
+    return null;
+  }
+}
+
+convertHTML("Dolce & Gabbana");

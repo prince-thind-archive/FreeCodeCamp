@@ -1,0 +1,15 @@
+function steamrollArray(arr) {
+  let res=[];
+  for(let e of arr)
+  {
+    if(Array.isArray(e)){
+      res.push(...steamrollArray(e));
+    }
+    else{
+      res.push(e);
+    }
+  }
+  return res;
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);

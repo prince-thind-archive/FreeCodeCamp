@@ -1,0 +1,11 @@
+function reverseString(str) {
+  let temp="";
+  for(let c of str)
+  {
+    temp=c+temp;
+  }
+  str=temp;
+  return str;
+}
+
+reverseString("hello");

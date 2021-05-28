@@ -1,0 +1,13 @@
+function fearNotLetter(str) {
+  let word=str.split("");
+  let first =word[0];
+  let last=word[word.length-1];
+  let i=0,j=0;
+for( i = first.charCodeAt(0),j; i < last.charCodeAt(0); i++,j++) {
+  if(word[j]!=String.fromCharCode(i)){
+    return (String.fromCharCode(i));
+  }
+}
+}
+
+fearNotLetter("abce");

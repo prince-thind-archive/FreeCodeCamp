@@ -1,0 +1,30 @@
+function smallestCommons(arr) {
+  let max=arr[0];
+  let min=arr[1];
+  if(max<min){
+    [max,min]=[min,max];
+  }
+  let range=[];
+  for(let i=min;i<=max;i++){
+    range.push(i);
+  }
+
+  let res=range[range.length-1];
+  while(!isLCM(res,range)){
+res=res+max;
+  }
+
+  return res;
+}
+
+function isLCM(num,arr){
+  for(let e of arr){
+    if(num%e!=0){
+      return false;
+    }
+  }
+  return true;
+}
+
+
+smallestCommons([1,5]);

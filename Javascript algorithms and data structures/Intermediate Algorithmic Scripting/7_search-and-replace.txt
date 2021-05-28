@@ -1,0 +1,21 @@
+function myReplace(str, before, after) {
+  let words=str.split(" ");
+  let finalWord=null;
+  for(let word of words){
+    if(word.toLowerCase()==before.toLowerCase()){
+      let firstLetterCase=word[0].toLowerCase()==word [0]?"lower":"upper";
+
+if(firstLetterCase=="upper"){
+  finalWord=after[0].toUpperCase();
+}
+else{
+  finalWord=after[0].toLowerCase();
+}
+    finalWord=finalWord.concat(after.slice(1));
+      words[words.indexOf(word)]=finalWord;
+    }
+  }
+  return words.join(" ");
+}
+
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");

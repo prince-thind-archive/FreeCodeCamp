@@ -1,0 +1,1 @@
+let yourArray=["Element0","Element1",NaN,null,false]; // Change this line

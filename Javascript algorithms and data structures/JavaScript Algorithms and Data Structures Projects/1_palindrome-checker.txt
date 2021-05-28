@@ -1,0 +1,18 @@
+function palindrome(str) {
+  str=str.replace(/[^\w\d]|_/ig,"");
+  let arr=str.split("");
+  let len=arr.length;
+  for(let i=0, j=len-1;i<=j;i++,j--){
+    if(arr[i].toLowerCase()!=arr[j].toLowerCase()){
+      return false;
+    }
+  }
+  return true;
+}
+
+
+
+palindrome("A man, a plan, a canal. Panama");
+
+//debug
+//console.log(palindrome("0_0 (: /-\ :) 0-0"));
